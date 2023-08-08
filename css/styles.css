@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+main .logo {
+  padding: 20px;
+}
+main .logo img {
+  max-width: 120px;
+  height: 100%;
+}
+main .image-content .mobile-img {
+  width: 100%;
+}
+main .image-content .desktop-img {
+  display: none;
+}
+main .main-content {
+  padding: 80px 60px;
+}
+main .main-content .logo-desktop {
+  display: none;
+}
+main .main-content h1 {
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 12px;
+}
+main .main-content h1 span {
+  font-weight: 100;
+}
+main .main-content p,
+main .main-content span {
+  color: hsl(0, 36%, 70%);
+}
+main .main-content p {
+  padding: 20px 0px;
+  text-align: center;
+  line-height: 1.5; /*Espacio entre lineas de un parrafo*/
+}
+main .main-content form {
+  position: relative; /*Para que el boton de envio se encuentre dentro 
+del formulario, el formulario debe estar en relativo*/
+}
+main .main-content form #email {
+  width: 100%;
+  border-radius: 30px;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid hsl(0, 36%, 70%);
+  outline: none;
+}
+main .main-content form #email::placeholder {
+  color: hsl(0, 36%, 70%);
+}
+main .main-content form #submit-btn {
+  position: absolute;
+  border-radius: 30px;
+  width: 65px;
+  height: 50px;
+  right: 0;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border: none;
+  -webkit-box-shadow: 2px 12px 29px -5px rgba(0, 0, 0, 0.18);
+  -moz-box-shadow: 2px 12px 29px -5px rgba(0, 0, 0, 0.18);
+  box-shadow: 2px 12px 29px -5px rgba(0, 0, 0, 0.18);
+}
+
+/*Desktop media query*/
+@media screen and (min-width: 960px) {
+  main {
+    background-color: hsl(0, 100%, 98%);
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  main .logo-mobile {
+    display: none;
+  }
+  main .image-content .mobile-img {
+    display: none;
+  }
+  main .image-content .desktop-img {
+    display: block;
+    height: 100vh;
+  }
+  main .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    padding: 300px 300px;
+  }
+  main .main-content h1 {
+    font-size: 50px;
+  }
+  main .main-content h1,
+  main .main-content p {
+    text-align: start;
+  }
+  main .main-content .logo-desktop {
+    position: absolute;
+    top: 5%;
+    padding: 20px 0px;
+    display: block;
+  }
+  main .main-content form #submit-btn {
+    position: absolute;
+    width: 75px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
